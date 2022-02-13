@@ -11,6 +11,6 @@ In the future it will:
         Check for special characters
         </li>
         <li>
-        Checl for numbers
+        Check for numbers
         </li>
     </ul>
