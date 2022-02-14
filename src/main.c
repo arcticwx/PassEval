@@ -3,13 +3,169 @@
 #include <string.h>
 #include <stdbool.h>
 
+// Global Variables
+bool hasSpecial;
+bool hasNums;
+
+bool checkSpecial(char pass[20]){
+    // Characters to check:  !@#$^&*()[]{}:;<>,./?~`
+
+
+    // I could probably loop through a string containing each charicter and do it that way, but oh well.
+    if(strchr(pass, '!') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '@') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '#') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '$') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '^') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '&') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '*') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, '(') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+
+    } else if(strchr(pass, ')') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '[') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, ']') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '{') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '}') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, ':') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, ';') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '<') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '>') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, ',') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '.') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '/') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '?') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '~') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else if(strchr(pass, '`') != NULL){
+        printf("Your password contains special characters, nothing to change in this field. \n");
+        return hasSpecial = true;
+        
+    } else {
+        printf("Try adding special characters. \n");
+        return hasSpecial = false;
+    }
+}
+
+bool checkNums(char pass[20]){
+    
+    // Numbers to check:  1234567890
+
+    if(strchr(pass, '0') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '1') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '2') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '3') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '4') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '5') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '6') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '7') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '8') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else if(strchr(pass, '9') != NULL){
+        printf("Your password contains numbers, nothing to change in this field. \n");
+        return hasNums = true;
+        
+    } else {
+        printf("Try adding some numbers. \n");
+        return hasNums = false;
+    }
+}
+
 int main(void){
     char pass[20];
     int i;
 
     int goodLength;
-    //bool hasSpecial;
-    // bool hasNums;
+    //bool hasNums;
 
     printf("Please enter your password:  ");
     scanf("%s", pass);
@@ -33,29 +189,11 @@ int main(void){
 
     // Implement special chars later.
 
-    // char specialCharacters[20] = "!@#$^&*()[]{}:;'<>,./?~`";
+    checkSpecial(pass);
 
-    // if(strchr(pass, specialCharacters) != NULL){
-    //     printf("Your password contains special characters, nothing to change in this field. \n");
-    //     hasSpecial = true;
-    // } else {
-    //     printf("Try adding special characters. \n");
-    //     hasSpecial = false;
-    // }
-
-    // Implement Numbers later aswell
-
-    // char nums[20] = "1234567890";
+    checkNums(pass);
     
-    // if(strchr(pass, nums) != NULL){
-    //     printf("Your password contains numbers, again there is nothing to change is this field \n");
-    //     hasNums = true;
-    // } else {
-    //     printf("Try adding some numbers \n");
-    //     hasNums = false;
-    // }
-
-    printf("\n\n SUMMARY:  \n");
+    printf("\n\nSUMMARY:  \n");
     
     if(goodLength == 0){
         printf("Increase password length! \n");
@@ -69,21 +207,21 @@ int main(void){
         printf("Password length was not gotten \n");
     }
 
-    // if(hasSpecial == true){
-    //     printf("Good! Your password has special characters! There is nothing to change in this field \n");
-    // } else if(hasSpecial == false){
-    //     printf("Password does not contain special characters! Change that! \n");
-    // } else {
-    //     printf("An error has occured! \n");
-    // }
+    if(hasSpecial == true){
+        printf("Good! Your password has special characters! There is nothing to change in this field \n");
+    } else if(hasSpecial == false){
+        printf("Password does not contain special characters! Change that! \n");
+    } else {
+        printf("An error has occured! \n");
+    }
 
-    // if(hasNums == true){
-    //     printf("Your password contains numbers, nothing to change in this feild \n");
-    // } else if (hasNums == false){
-    //     printf("You need to add numbers to your password! \n");
-    // } else {
-    //     printf("An error has occured! \n");
-    // }
+    if(hasNums == true){
+        printf("Your password contains numbers, nothing to change in this feild \n");
+    } else if (hasNums == false){
+        printf("You need to add numbers to your password! \n");
+    } else {
+        printf("An error has occured! \n");
+    }
 
     system("pause");
 
