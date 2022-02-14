@@ -1,16 +1,6 @@
 # PASSEVAL
 ## PassEval is a simple password validator written in c.
 
-Currently only checks length.
+PassEval checks a passwords length, and if it contains special characters and numbers.
 
-<br>
-
-In the future it will:
-    <ul>
-        <li>
-        Check for special characters
-        </li>
-        <li>
-        Check for numbers
-        </li>
-    </ul>
+Feel free to contribute, please read CONTRIBUTING.md first.
